@@ -36,7 +36,7 @@ def calculate_subtotal(items: List[Dict[str, Any]]) -> float:
     return round(subtotal, 2)
 
 
-def calculate_tier_discount(subtotal: float, tier: str) -> float:
+def calculate_tier_discount(subtotal: float, tier: str="standard") -> float:
     """
     Calculate the membership discount amount for a given subtotal and tier.
     """
