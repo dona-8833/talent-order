@@ -114,7 +114,7 @@ def calculate_order_summary(cart: Dict[str, Any]) -> Dict[str, Any]:
     # Step 1: Gross Subtotal
     subtotal = calculate_subtotal(items)
 
-    discount_item = [item for item in cart["items"] if item["is_discountable"] == True or item["category"] != "gift_card"]
+    discount_item = [item for item in cart["items"] if item["is_discountable"] == True and  item["category"] != "gift_card"]
 
     subtotal_discount = calculate_subtotal(discount_item)
 
